@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url =http://calvink19.github.io/contact" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
 </head>
-
 <body>
-  <p><strong>Redirecting to http://calvink19.github.io/contact</strong><br>
-If your browser does not redirect automatically, click <a href="http://calvink19.github.io/contact">here</a>.
-  </p>
+<button onclick="redirectUser()">Redirecting</button>
+<script>
+function redirectUser() {
+  var queryString = window.location.search;
+  var url = 'https://calvink19.github.io' + queryString;
+  window.location.href = url;
+}
+</script>
 </body>
-
 </html>
