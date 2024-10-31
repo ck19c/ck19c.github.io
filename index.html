@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecting...</title>
+  <title>Redirecting</title>
+  <script>
+    // Get the query string value
+    function getQueryStringValue(key) {
+      return decodeURIComponent(new URLSearchParams(window.location.search).get(key));
+    }
+
+    // Redirect the user to the page based on the query string
+    function redirectUser() {
+      var queryString = getQueryStringValue('p');
+      if (queryString) {
+        window.location = 'http://calvink19.github.io/' + queryString;
+      }
+    }
+
+    // Call the redirectUser function when the page loads
+    window.onload = redirectUser;
+  </script>
 </head>
 <body>
-<button onclick="redirectUser()">Redirecting</button>
-<script>
-function redirectUser() {
-  var queryString = window.location.search;
-  var url = 'https://calvink19.github.io' + queryString;
-  window.location.href = url;
-}
-</script>
+  <h1>Redirecting...</h1>
 </body>
 </html>
